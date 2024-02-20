@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de cadastro HEMOSC</title>
+  </head>
+  <body>
+    <h1>Formulário para cadastro no HEMOSC</h1>
+    <form method="GET">
+      <label for="nomeCompleto">Nome completo:</label>
+      <input
+        placeholder="Digite o seu nome"
+        id="nomeCompleto"
+        name="nomeCompleto"
+        autofocus
+        tabindex="1"
+        type="text"
+        required
+      />
+      <label for="cpf">CPF:</label>
+      <input
+        placeholder="Digite seu CPF"
+        id="cpf"
+        name="cpf"
+        tabindex="2"
+        type="number"
+        maxlength="11"
+        minlength="11"
+        required
+      />
+      <label for="tipo">Escolha o tipo de sangue:</label>
+      <select id="tipo" name="tipo">
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+      </select>
+      <!-- <input type="submit" value="Enviar" /> -->
+      <button type="reset">Limpar</button>
+      <button type="submit">Cadastrar-se</button>
+    </form>
+    <footer>
+      <span>HEMOSC</span>
+      <div class="address-info">
+        <h3>Informações de Endereço</h3>
+        <p>Rua Fictícia, 123</p>
+        <p>Bairro Imaginário</p>
+        <p>Cidade dos Sonhos</p>
+      </div>
+    </footer>
+  </body>
+</html>
