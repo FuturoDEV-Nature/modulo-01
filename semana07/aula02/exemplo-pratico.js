@@ -72,13 +72,43 @@ class ContaPoupanca extends ContaBancaria {
     this.descontoEmprestimo = descontoEmprestimo
     this.rendimento = rendimento
   }
+
+  // override
+  sacar(valor){
+    super.sacar(valor + this.taxa)
+    // if(valor > this._saldo){
+    //   console.log("Saldo insuficiente!")
+    //   return
+    // }
+
+    // // this.saldo = this.saldo - valor
+    // this._saldo -= valor + this.taxa
+  }
 }
 
 class ContaCorrente extends ContaBancaria {
   tipo = 'Corrente';
   taxa = 2;
+
+  // constructor(
+  //   nomeTitular,
+  //   agencia,
+  //   conta,
+  //   banco,
+  //   )
+  // {
+  //   super(nomeTitular, agencia, conta, banco)
+  // }
 }
 
+let contaBancaria = new ContaBancaria("Maria", 1234, 12345658)
+contaBancaria.depositar(100)
+contaBancaria.sacar(50)
+contaBancaria.exibirSaldo()
+
+console.log("--------------------")
+
 let contaP = new ContaPoupanca("Bruno", 1234, 123456, 10, 2)
+contaP.depositar(100)
+contaP.sacar(50)
 contaP.exibirSaldo()
-console.log(contaP)
