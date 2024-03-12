@@ -45,6 +45,7 @@ class Pessoa {
   }
 }
 
+
 class Cliente extends Pessoa {
   telefone;
   email;
@@ -58,9 +59,9 @@ class Cliente extends Pessoa {
   }
 }
 
+
 const clienteBruno = new Cliente("Bruno", 25, "Professor", "8899999999", "email@email.com", "2015-01-10")
 console.log(clienteBruno)
-
 
 
 
